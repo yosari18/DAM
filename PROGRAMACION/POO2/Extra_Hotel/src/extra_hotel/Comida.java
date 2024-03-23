@@ -10,14 +10,24 @@ package extra_hotel;
  */
 public class Comida extends Hotel {
 
-    public Comida(String nombre, int Estrella) {
-        super(nombre, Estrella);
+    private String nombre;
+
+    public Comida(String nombreHotel, int estrella, String nombre) {
+        super(nombreHotel, estrella);
+        this.nombre = nombre;
+
+    }
+
+    public String getnombre() {
+        return nombre;
+    }
+
+    boolean esVegano() {
+        return false;
     }
 
     @Override
     public void imprimir() {
-       
     }
-    
-    
+
 }

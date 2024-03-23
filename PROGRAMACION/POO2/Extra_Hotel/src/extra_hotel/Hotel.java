@@ -4,31 +4,32 @@
  */
 package extra_hotel;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author yosari
  */
 public abstract class Hotel {
+private String nombreHotel;
+    private int estrella;
 
-    private final String nombre;
-    private int Estrella;
-
-    public Hotel(String nombre, int Estrella) {
-        this.nombre = nombre;
-        this.Estrella = Estrella;
+    public Hotel(String nombreHotel, int estrella) {
+        this.nombreHotel = nombreHotel;
+        if(estrella>=1&&estrella<=5){
+        this.estrella = estrella;
+        }else{
+           this.estrella=1;
+        }
     }
+    public abstract void imprimir();
     
 
-    public abstract void imprimir() ;
-
-    public String getNombre() {
-        return nombre;
+    public String getNombreHotel() {
+        return nombreHotel;
     }
 
     public int getEstrella() {
-        return Estrella;
+        return estrella;
     }
-
-    
-
 }
